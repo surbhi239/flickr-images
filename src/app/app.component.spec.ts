@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'flickr-image'`, () => {
+  it(`should have as title 'flickr-images'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('flickr-image');
+    expect(app.title).toEqual('flickr-images');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('flickr-image app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('flickr-images app is running!');
   });
 });

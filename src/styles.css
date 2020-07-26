@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~font-awesome/css/font-awesome.css";  
+html,body{
+    background-color: #F2F2F2;
+}
+.bg-color-blue{
+    padding: 0;
+    height: 2.8vw;
+    background: linear-gradient(to bottom,#3364BA, #128bcf, #5bbbef,#95d3f4 )  !important;
+}
+.rating-list {
+    display: inline-block;
+    list-style: none;
+  }

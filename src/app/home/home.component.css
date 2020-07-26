@@ -1,0 +1,21 @@
+@media only screen and (min-width: 768px) {
+    .card-size {
+      height: 16vw;
+    }
+}
+.p-0{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.selectTab{
+    height: 2.8vw;
+    color: #3364BA;
+    border: 0;
+    border-radius: 8%;
+}
+.card{
+  box-shadow: 0 4px 8px 0 #888888;
+}
+.star-mark{
+  position: absolute;
+}

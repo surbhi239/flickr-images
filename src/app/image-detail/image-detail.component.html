@@ -1,0 +1,35 @@
+<div *ngIf="photo.length != 0">
+    <div class="row bg-color-blue">
+        <div class="ml-5 page-title">{{photo.title}}</div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-3 offset-1">
+            <img class="card-size border border-dark rounded"
+                src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg"
+                alt="">
+            <div class="label-font mt-2">OWNER</div>
+            <div><b>{{photo.owner}}</b></div>
+            <hr>
+            <div class="label-font">DESCRIPTION</div>
+            <div><b>{{photo.title}}</b></div>
+            <hr>
+        </div>
+        <div class="offset-1 col-4 mt-2">
+            <div class="row col-12 label-font"><b>WRITE A REVIEW</b></div>
+            <div class="row col-12 label-font mt-4">RATING</div>
+            <div class="row col-12">
+                <ul class="list-inline rating-list" *ngFor="let star of stars">
+                    <li (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}">
+                        <i class="fa fa-star "></i></li>
+                </ul>
+            </div>
+            <form [formGroup]="review" (ngSubmit)="reviewAdded()">
+                <div class="row col-12 label-font">RATED BY</div>
+                <input class="form-control" type="text" formControlName="ratedBy">
+                <div class="row col-12 label-font mt-3">REASON FOR RATING</div>
+                <textarea class="form-control" formControlName="reasonForRating"></textarea>
+                <button type="submit" class="btn btn-primary mt-3">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</div>
