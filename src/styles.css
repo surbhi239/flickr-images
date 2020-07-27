@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~font-awesome/css/font-awesome.css";  
 html,body{
+    height: 99%;
     background-color: #F2F2F2;
+    overflow: hidden;
 }
 .bg-color-blue{
     padding: 0;
@@ -12,3 +14,52 @@ html,body{
     display: inline-block;
     list-style: none;
   }
+  .horizontalScoll{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .horizontalScollInnerDiv{
+    height: 99%;
+    width: 100%;
+      overflow: auto;
+  }
+  .horizontalScollInnerDiv::-webkit-scrollbar{
+      display: none;
+  }
+  .page-item .page-link, ul.pagination{
+    height: 2.8vw !important;
+  }
+  .page-link{
+    padding: 0.4vw 0.75vw !important;
+    display: inline-table;
+  }
+  .selectTab{
+    height: 2.8vw;
+    color: #3364BA;
+    border: 0;
+    border-radius: 8%;
+}
+  @media only screen and (max-width: 576px) {
+    .bg-color-blue {
+        height: 4.8vw !important;
+    }
+    .page-item .page-link, ul.pagination{
+        height: 4.8vw !important;
+        line-height: 0.9;
+      }
+    .selectTab{
+        height: 4.8vw !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .page-item .page-link, ul.pagination{
+        line-height: 1;
+      }
+}
+@media only screen and (min-width: 1200px) {
+    .page-item .page-link, ul.pagination{
+        line-height: 1.5;
+      }
+}
